@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+    <schema-selection match-schema="TEST_USER"/>
+    <type-mapping>
+        <sql-type jdbc-type="NUMERIC" hibernate-type="java.lang.Long"/>
+    </type-mapping>
+
+    <table name="COUNTRIES">
+
+    </table>
+    <table name="DEPARTMENTS" schema="TEST_USER">
+        <meta attribute="class-description">
+            Javadoc for the DEPARTMENTS class
+            @author eugen
+        </meta>
+        <meta attribute="class-code">// Here is the extra code</meta>
+        <meta attribute="extra-import">java.util.List</meta>
+        <meta attribute="extra-import">java.applet.Applet</meta>
+       
+        <primary-key>
+            <!-- setting up a specific id generator for a table -->
+            <generator class="sequence">
+                <param name="sequence_name">DEPARTMENTS_SEQ</param>
+            </generator>
+            <key-column  name="department_id"/>
+        </primary-key>
+        <column name="DEPARTMENT_ID" >
+            <meta attribute="use-in-equals">true</meta>
+
+        </column>
+        <column name="DEPARTMENT_NAME" >
+            <meta attribute="use-in-equals">true</meta>
+        </column>
+    </table>
+    <table name="EMPLOYEES">
+
+    </table>
+    <table name="JOBS">
+
+    </table>
+    <table name="LOCATIONS">
+
+    </table>
+    <table name="REGIONS">
+
+    </table>
+    <table name="EMP_DETAILS_VIEW" schema="TEST_USER">
+        <primary-key>
+            <key-column name="EMPLOYEE_ID"/>
+        </primary-key>
+
+    </table>
+
+</hibernate-reverse-engineering>
